@@ -5,37 +5,6 @@
 //  Created by Talari Praveen kumar on 05/01/25.
 //
 
-//import Foundation
-//
-//
-//class WeatherViewModel: ObservableObject {
-//    @Published var cityName: String = ""
-//    @Published var weatherData: WeatherResponse?
-//    @Published var errorMessage: String?
-//    
-//    private let service = WeatherService()
-//    
-//    func fetchWeather() {
-//        guard !cityName.isEmpty else {
-//            errorMessage = "Please enter a city name."
-//            return
-//        }
-//        
-//        service.fetchWeather(for: cityName) { [weak self] result in
-//            DispatchQueue.main.async {
-//                switch result {
-//                case .success(let weather):
-//                    self?.weatherData = weather
-//                    self?.errorMessage = nil
-//                case .failure(let error):
-//                    self?.errorMessage = error.localizedDescription
-//                }
-//            }
-//        }
-//    }
-//}
-
-
 import Foundation
 
 class WeatherViewModel: ObservableObject {
